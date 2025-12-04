@@ -68,7 +68,7 @@
     <div class="container">
         <h2>Student Registration</h2>
 
-        <form id="studentForm">
+        <form id="studentForm" onsubmit="showPopup(event)">
             <label for="name">Full Name</label>
             <input type="text" id="name" placeholder="Enter your name" required>
 
@@ -86,11 +86,11 @@
     </div>
 
     <script>
-        document.getElementById("studentForm").addEventListener("submit", function(e) {
-            e.preventDefault(); // stop refresh
-            alert("Data stored successfully"); // popup message
-            this.reset(); // clear fields
-        });
+        function showPopup(event) {
+            event.preventDefault(); // stop page reload
+            alert("Data stored successfully!");
+            document.getElementById("studentForm").reset();
+        }
     </script>
 </body>
 </html>
