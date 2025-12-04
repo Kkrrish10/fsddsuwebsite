@@ -68,7 +68,7 @@
     <div class="container">
         <h2>Student Registration</h2>
 
-        <form>
+        <form id="studentForm">
             <label for="name">Full Name</label>
             <input type="text" id="name" placeholder="Enter your name" required>
 
@@ -84,5 +84,13 @@
             <button type="submit">Submit</button>
         </form>
     </div>
+    <script>
+document.getElementById("studentForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("Data stored successfully");
+    this.reset();
+});
+</script>
 </body>
 </html>
+
