@@ -84,13 +84,13 @@
             <button type="submit">Submit</button>
         </form>
     </div>
+
     <script>
-document.getElementById("studentForm").addEventListener("submit", function(e) {
-    e.preventDefault();
-    alert("Data stored successfully");
-    this.reset();
-});
-</script>
+        document.getElementById("studentForm").addEventListener("submit", function(e) {
+            e.preventDefault(); // stop refresh
+            alert("Data stored successfully"); // popup message
+            this.reset(); // clear fields
+        });
+    </script>
 </body>
 </html>
-
